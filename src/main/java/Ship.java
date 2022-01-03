@@ -22,16 +22,14 @@ public class Ship {
     position.setY(y);
   }
   
-  public Position moveLeft() {
-    return new Position(position.getX()-1, position.getY());
+  public Position moveLeft() {return new Position(position.getX()-1, position.getY());
   }
   
   public Position moveRight() {
     return new Position(position.getX()+1, position.getY());
   }
   
-  public void Stand() {
-  }
+  public Position Stand() {return position;}
   
   public void draw(Screen screen) {
     screen.setCharacter(position.getX(), position.getY(), TextCharacter.fromCharacter('X')[0]);

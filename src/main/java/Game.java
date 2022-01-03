@@ -46,9 +46,9 @@ public class Game {
   
   public void processKey(KeyStroke key) {
     switch (key.getKeyType()){
-      case ArrowLeft: moveShip(ship.moveLeft());
-      case ArrowRight: moveShip(ship.moveRight());
-      default: ship.Stand();
+      case ArrowLeft : moveShip(ship.moveLeft());
+      case ArrowRight : moveShip(ship.moveRight());
+      default : ship.Stand();
     }
   }
   
