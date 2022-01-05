@@ -55,11 +55,7 @@ public class Board {
     return true;
   }
   
-  public int getX(){
+  public int getShitX(){
     return ship.getX();
-  }
-  
-  public int getY() {
-    return ship.getY();
   }
 }
