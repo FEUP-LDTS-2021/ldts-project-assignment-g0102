@@ -1,5 +1,12 @@
+import com.googlecode.lanterna.input.KeyStroke;
 import org.junit.jupiter.api.Test;
+import com.googlecode.lanterna.input.KeyType;
 
+
+import java.security.Key;
+
+import static com.googlecode.lanterna.input.KeyType.ArrowLeft;
+import static com.googlecode.lanterna.input.KeyType.ArrowRight;
 import static org.junit.Assert.assertEquals;
 
 public class TestBoard {
@@ -11,8 +18,21 @@ public class TestBoard {
     }
 
     @Test
-    public void testProcessKey(){
-        
+    public void testProcessKeyLeft(){
+        KeyStroke key = new KeyStroke(ArrowLeft);
+        Board board = new Board(100,50);
+        board.processKey(key);
+        Position pos = new Position(48,50);
+        assertEquals(pos.getX(), board.getShitX());
+    }
+
+    @Test
+    public void testProcessKeyRight(){
+        KeyStroke key = new KeyStroke(ArrowRight);
+        Board board = new Board(100,50);
+        board.processKey(key);
+        Position pos = new Position(50,50);
+        assertEquals(pos.getX(), board.getShitX());
     }
 
     @Test
@@ -21,7 +41,7 @@ public class TestBoard {
         Ship ship = new Ship(49, 40);
         Position pos = new Position(50, 40);
         board.moveShip(pos);
-        assertEquals(pos.getX(), ship.getX());
+        assertEquals(pos.getX(), board.getShitX());
     }
 
     @Test
