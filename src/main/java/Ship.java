@@ -1,4 +1,5 @@
-import com.googlecode.lanterna.TextCharacter;
+import com.googlecode.lanterna.*;
+import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.screen.Screen;
 
 public class Ship {
@@ -22,17 +23,23 @@ public class Ship {
     position.setY(y);
   }
   
-  public Position moveLeft() {return new Position(position.getX()-1, position.getY());
+  public Position moveLeft() {
+    return new Position(position.getX()-1, position.getY());
   }
   
   public Position moveRight() {
     return new Position(position.getX()+1, position.getY());
   }
   
-  public Position Stand() {return position;}
+  public Position Stand() {
+    return position;
+  }
   
-  public void draw(Screen screen) {
-    screen.setCharacter(position.getX(), position.getY(), TextCharacter.fromCharacter('X')[0]);
+  public void draw(TextGraphics graphics) {
+    graphics.setForegroundColor(TextColor.Factory.fromString("#FFC300"));
+    graphics.enableModifiers(SGR.BOLD);
+    graphics.putString(new TerminalPosition(position.getX()-1, position.getY()-1), "/\\");
+    graphics.putString(new TerminalPosition(position.getX()-2, position.getY()), "----");
   }
   
   public void setPosition(Position position) {
