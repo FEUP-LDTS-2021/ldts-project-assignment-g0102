@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestBoard" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-05T12:29:01" hostname="HANNA" time="0.076">
+<testsuite name="TestBoard" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-01-05T21:53:07" hostname="diogo-IdeaPro" time="0.039">
   <properties/>
-  <testcase name="testProcessKeyLeft()" classname="TestBoard" time="0.076"/>
+  <testcase name="testCanShipMoveLeft()" classname="TestBoard" time="0.023"/>
+  <testcase name="testCanShipMoveTrue()" classname="TestBoard" time="0.001"/>
+  <testcase name="testBoardConstructor()" classname="TestBoard" time="0.0"/>
+  <testcase name="testMoveShip()" classname="TestBoard" time="0.001"/>
+  <testcase name="testCanShipMoveRight()" classname="TestBoard" time="0.001"/>
+  <testcase name="testMoveAlienDown()" classname="TestBoard" time="0.0"/>
+  <testcase name="testProcessKeyRandom()" classname="TestBoard" time="0.005"/>
+  <testcase name="testProcessKeyRight()" classname="TestBoard" time="0.001"/>
+  <testcase name="testProcessKeyLeft()" classname="TestBoard" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

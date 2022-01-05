@@ -4,20 +4,28 @@ import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Board {
   
   private int width, height;
   private Ship ship;
+  private List<Alien> aliens;
+  private boolean canAlienGoRight = true;
   
   Board(int x, int y){
     width = x;
     height = y;
     ship = new Ship(49,40);
+    this.aliens = createAliens();
   }
 
   public int getWidth(){return width;}
 
   public int getHeight(){return height;}
+  
+  public boolean getMove(){return canAlienGoRight;}
 
   
   public void processKey(KeyStroke key) {
@@ -26,12 +34,24 @@ public class Board {
       case ArrowRight-> moveShip(ship.moveRight());
       default-> moveShip(ship.Stand());
     }
+    if(canAlienGoRight) {
+      for (Alien alien : aliens)
+        if (alien.close(width)) moveAlienDown();
+      moveAlienRight();
+    }
+    else {
+      for (Alien alien : aliens)
+        if (alien.close()) moveAlienDown();
+      moveAlienLeft();
+    }
   }
   
   public void draw(TextGraphics graphics){
     graphics.setBackgroundColor(TextColor.Factory.fromString("BLACK"));
     graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width, height), ' ');
     ship.draw(graphics);
+    for(Alien alien : aliens)
+      alien.draw(graphics);
   }
   
   public void setPosition(Position position){
@@ -55,7 +75,33 @@ public class Board {
     return true;
   }
   
-  public int getShitX(){
+  private List<Alien> createAliens() {
+    aliens = new ArrayList<>();
+    for(int i = 0; i < 10; i += 2)
+      for(int j = 1; j < 40; j += 5){
+        aliens.add(new Alien(j,i+8));
+      }
+    return aliens;
+  }
+  
+  public int getShipX(){
     return ship.getX();
+  }
+  
+  public void moveAlienDown() {
+    for(Alien alien : aliens) {
+      alien.setPosition(alien.moveDown());
+    }
+    canAlienGoRight = !canAlienGoRight;
+  }
+  
+  public void moveAlienLeft() {
+    for(Alien alien : aliens)
+      alien.setPosition(alien.moveLeft());
+  }
+  
+  public void moveAlienRight() {
+    for(Alien alien : aliens)
+      alien.setPosition(alien.moveRight());
   }
 }

@@ -5,9 +5,8 @@ import com.googlecode.lanterna.input.KeyType;
 
 import java.security.Key;
 
-import static com.googlecode.lanterna.input.KeyType.ArrowLeft;
-import static com.googlecode.lanterna.input.KeyType.ArrowRight;
-import static org.junit.Assert.assertEquals;
+import static com.googlecode.lanterna.input.KeyType.*;
+import static org.junit.Assert.*;
 
 public class TestBoard {
     @Test
@@ -23,7 +22,7 @@ public class TestBoard {
         Board board = new Board(100,50);
         board.processKey(key);
         Position pos = new Position(48,50);
-        assertEquals(pos.getX(), board.getShitX());
+        assertEquals(pos.getX(), board.getShipX());
     }
 
     @Test
@@ -32,7 +31,16 @@ public class TestBoard {
         Board board = new Board(100,50);
         board.processKey(key);
         Position pos = new Position(50,50);
-        assertEquals(pos.getX(), board.getShitX());
+        assertEquals(pos.getX(), board.getShipX());
+    }
+    
+    @Test
+    public void testProcessKeyRandom(){
+        KeyStroke key = new KeyStroke(ArrowUp);
+        Board board = new Board(100,50);
+        board.processKey(key);
+        Position pos = new Position(49,50);
+        assertEquals(pos.getX(), board.getShipX());
     }
 
     @Test
@@ -41,7 +49,7 @@ public class TestBoard {
         Ship ship = new Ship(49, 40);
         Position pos = new Position(50, 40);
         board.moveShip(pos);
-        assertEquals(pos.getX(), board.getShitX());
+        assertEquals(pos.getX(), board.getShipX());
     }
 
     @Test
@@ -63,5 +71,15 @@ public class TestBoard {
         Board board = new Board(100,50);
         Position pos = new Position(49, 40);
         assertEquals(true, board.canShipMove(pos));
+    }
+    
+    @Test
+    public void testMoveAlienDown() {
+        Board board = new Board(100,50);
+        assertTrue(board.getMove());
+        board.moveAlienDown();
+        assertFalse(board.getMove());
+        board.moveAlienDown();
+        assertTrue(board.getMove());
     }
 }
