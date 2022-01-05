@@ -22,11 +22,12 @@ public class Board {
   }
 
   public int getWidth(){return width;}
-
   public int getHeight(){return height;}
-  
+  public int getShipX(){
+    return ship.getX();
+  }
   public boolean getMove(){return canAlienGoRight;}
-
+  public Alien getFirstAlien(){return aliens.get(0);}
   
   public void processKey(KeyStroke key) {
     switch (key.getKeyType()) {
@@ -82,10 +83,6 @@ public class Board {
         aliens.add(new Alien(j,i+8));
       }
     return aliens;
-  }
-  
-  public int getShipX(){
-    return ship.getX();
   }
   
   public void moveAlienDown() {
