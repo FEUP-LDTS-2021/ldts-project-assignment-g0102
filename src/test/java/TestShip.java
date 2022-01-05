@@ -1,13 +1,13 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertEquals;
 
 public class TestShip {
     @Test
     public void TestShipConstructor() {
         Ship ship = new Ship(1,2);
-        Assertions.assertEquals(1,ship.getX());
-        Assertions.assertEquals(2,ship.getY());
+        assertEquals(1,ship.getX());
+        assertEquals(2,ship.getY());
     }
 
     @Test
@@ -20,10 +20,10 @@ public class TestShip {
         ship.setX(shipsetX);
         ship.setY(shipsetY);
         //then
-        Assertions.assertEquals(20,ship.getX());
-        Assertions.assertEquals(40,ship.getY());
+        assertEquals(20,ship.getX());
+        assertEquals(40,ship.getY());
     }
-
+    //nao sei como fazer este teste
     @Test
     public void TestShipMoveLeft() {
         //given
@@ -32,7 +32,7 @@ public class TestShip {
         //when
         Position pos = ship.moveLeft();
         //then
-        Assertions.assertEquals(pos.getX(),shipMoved.getX());
+        assertEquals(pos.getX(),shipMoved.getX());
     }
 
     @Test
@@ -43,29 +43,18 @@ public class TestShip {
         //when
         Position pos = ship.moveRight();
         //then
-        Assertions.assertEquals(pos.getX(),shipMoved.getX());
+        assertEquals(pos.getX(),shipMoved.getX());
     }
 
     @Test
     public void TestShipStand() {
         //given
-        Ship ship = new Ship(20,30);
-        // when
-        Position pos = ship.Stand();
-        //then
-        Assertions.assertEquals(ship.getX(),pos.getX());
-        Assertions.assertEquals(ship.getY(),pos.getY());
-    }
-
-    @Test
-    public void TestShipSetPosition()  {
-        //given
-        Ship ship = new Ship(10,10);
-        Position pos = new Position(20,20);
+        Ship ship = new Ship(20, 30);
+        Ship shipMoved = new Ship(20,30);
         //when
-        ship.setPosition(pos);
+        Position pos = shipMoved.Stand();
         //then
-        Assertions.assertEquals(pos.getX(),ship.getX());
-        Assertions.assertEquals(pos.getY(),ship.getY());
+        assertEquals(pos.getX(),shipMoved.getX());
+        assertEquals(pos.getY(),shipMoved.getY());
     }
 }
