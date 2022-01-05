@@ -22,9 +22,9 @@ public class Board {
   
   public void processKey(KeyStroke key) {
     switch (key.getKeyType()) {
-      case ArrowLeft: moveShip(ship.moveLeft());
-      case ArrowRight: moveShip(ship.moveRight());
-      default: moveShip(ship.Stand());
+      case ArrowLeft-> moveShip(ship.moveLeft());
+      case ArrowRight-> moveShip(ship.moveRight());
+      default-> moveShip(ship.Stand());
     }
   }
   
