@@ -1,5 +1,5 @@
 import gui.GameState;
-import gui.GameView;
+import gui.viewers.GameView;
 
 import java.io.IOException;
 

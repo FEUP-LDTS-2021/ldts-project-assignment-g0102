@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="188dd432-6d35-4fb0-a760-a217d4574229" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gui/MenuBoardView.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/MenuBoardView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/MenuLoss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Loss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/MenuLossView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -16,18 +17,25 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/GameView.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenuView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenuView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenuView.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MenuBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/MenuBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/colors/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/colors/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MenuBoardView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/Stages/Board$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/Stages/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/Stages/Start.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/GameView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MainMenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/MainMenuView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/colors/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/colors/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuBoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/MenuBoardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Stages/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Stages/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/data/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

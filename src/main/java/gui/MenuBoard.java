@@ -4,20 +4,20 @@ import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
-import gui.Stages.Board;
+import gui.stages.Board;
+import gui.viewers.GameView;
+import gui.viewers.MenuBoardView;
 
 import java.io.IOException;
 
 public class MenuBoard {
   
   private Board board;
-  private final TextGraphics graphics;
   private Screen screen;
   private final MenuBoardView a;
   
   public MenuBoard(GameView gui, int width, int height) {
     this.board = new Board(width,height);
-    this.graphics = gui.getGraphics();
     this.screen = gui.getScreen();
     this.a = new MenuBoardView(gui, board);
   }

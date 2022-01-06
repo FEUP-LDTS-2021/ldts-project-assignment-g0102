@@ -3,6 +3,8 @@ package gui;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
+import gui.viewers.GameView;
+import gui.viewers.MainMenuView;
 
 import java.io.IOException;
 
@@ -11,8 +13,8 @@ public class MainMenu {
   private final Screen screen;
   private final MainMenuView v;
   
-  MainMenu(GameView gui, int width, int height){
-    v = new MainMenuView(gui, width, height);
+  MainMenu(GameView gui){
+    v = new MainMenuView(gui);
     this.screen = gui.getScreen();
   }
   
@@ -26,7 +28,6 @@ public class MainMenu {
         screen.stopScreen();
       if(key.getKeyType() == KeyType.Character && key.getCharacter() == ' ')
         break;
-      
     }while(key.getKeyType() != KeyType.EOF);
   }
 }

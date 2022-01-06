@@ -1,4 +1,4 @@
-package gui.Stages;
+package gui.stages;
 
 import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.TerminalPosition;
@@ -13,18 +13,14 @@ import java.util.Random;
 
 public class Start {
   
-  private final int width, height;
   private List<Alien> aliens;
   
-  public Start(int x, int y) {
-    this.width = x;
-    this.height = y;
+  public Start() {
     this.aliens = createAliens();
   }
   
   public void draw(TextGraphics graphics) {
     graphics.setBackgroundColor(TextColor.Factory.fromString("BLACK"));
-    graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width, height), ' ');
     graphics.enableModifiers(SGR.BOLD);
     graphics.enableModifiers(SGR.BLINK);
     graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));

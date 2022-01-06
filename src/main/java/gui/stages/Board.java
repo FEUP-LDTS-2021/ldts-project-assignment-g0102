@@ -1,4 +1,4 @@
-package gui.Stages;
+package gui.stages;
 
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
@@ -16,6 +16,8 @@ public class Board {
   private Ship ship;
   private List<Wall> walls;
   private List<Alien> aliens;
+  private final Alien left = new Alien(1,8);                      // transformar numa lista
+  private final Alien right = new Alien(36,8);
   private boolean canAlienGoRight = true;
   private Information informations;
   
@@ -41,14 +43,16 @@ public class Board {
       default-> moveShip(ship.Stand());
     }
     if(canAlienGoRight) {
-      for (Alien alien : aliens)
-        if (alien.close(width)) moveAlienDown();
+      if (right.close(width)) moveAlienDown();
       moveAlienRight();
+      left.setPosition(left.moveRight());
+      right.setPosition(right.moveRight());
     }
     else {
-      for (Alien alien : aliens)
-        if (alien.close()) moveAlienDown();
+      if (left.close()) moveAlienDown();
       moveAlienLeft();
+      left.setPosition(left.moveLeft());
+      right.setPosition(right.moveLeft());
     }
   }
   

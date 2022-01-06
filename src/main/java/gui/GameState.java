@@ -1,19 +1,24 @@
 package gui;
 
+import gui.viewers.GameView;
+
 import java.io.IOException;
 
 public class GameState {
   
-  MainMenu a;
-  MenuBoard b;
+  MainMenu start;
+  MenuBoard board;
+  MenuLoss loss;
   
   public GameState(GameView gui, int width, int height){
-    a = new MainMenu(gui, width, height);
-    b = new MenuBoard(gui, width, height);
+    start = new MainMenu(gui);
+    board = new MenuBoard(gui, width, height);
+    loss = new MenuLoss(gui, width, height);
   }
   
   public void run() throws IOException {
-    a.run();
-    b.run();
+    start.run();
+    board.run();
+    //loss.run();
   }
 }

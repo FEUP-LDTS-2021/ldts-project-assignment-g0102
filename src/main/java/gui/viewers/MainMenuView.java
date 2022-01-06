@@ -1,8 +1,8 @@
-package gui;
+package gui.viewers;
 
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.screen.Screen;
-import gui.Stages.Start;
+import gui.stages.Start;
 
 import java.io.IOException;
 
@@ -12,10 +12,10 @@ public class MainMenuView {
   private final TextGraphics graphics;
   private final Start a;
   
-  public MainMenuView(GameView gui, int width, int height) {
+  public MainMenuView(GameView gui) {
     this.graphics = gui.getGraphics();
     this.screen = gui.getScreen();
-    this.a = new Start(width,height);
+    this.a = new Start();
   }
   
   public void draw() throws IOException {

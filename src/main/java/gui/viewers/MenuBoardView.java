@@ -1,8 +1,8 @@
-package gui;
+package gui.viewers;
 
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.screen.Screen;
-import gui.Stages.Board;
+import gui.stages.Board;
 
 import java.io.IOException;
 
