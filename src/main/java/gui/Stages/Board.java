@@ -1,4 +1,4 @@
-package data;
+package gui.Stages;
 
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;

@@ -1,4 +1,4 @@
-package gui.colors;
+package gui.Stages;
 
 import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.TerminalPosition;
@@ -27,6 +27,7 @@ public class Start {
     graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width, height), ' ');
     graphics.enableModifiers(SGR.BOLD);
     graphics.enableModifiers(SGR.BLINK);
+    graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));
     graphics.putString(new TerminalPosition(35,25), "Welcome to Space Invaders!!");
     graphics.putString(new TerminalPosition(38,26), "To start press Space");
     graphics.disableModifiers(SGR.BLINK);

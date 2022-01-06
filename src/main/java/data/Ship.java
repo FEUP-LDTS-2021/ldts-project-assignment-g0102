@@ -8,7 +8,7 @@ public class Ship {
   
   private Position position;
   
-  Ship(int x, int y){
+  public Ship(int x, int y){
     position = new Position(x,y);
   }
   

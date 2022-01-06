@@ -2,26 +2,25 @@ package gui;
 
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.screen.Screen;
-import gui.Stages.Start;
+import gui.Stages.Board;
 
 import java.io.IOException;
 
-public class MainMenuView {
+public class MenuBoardView {
   
-  private final Screen screen;
+  private Screen screen;
   private final TextGraphics graphics;
-  private final Start a;
+  private Board board;
   
-  public MainMenuView(GameView gui, int width, int height) {
+  public MenuBoardView(GameView gui, Board board) {
     this.graphics = gui.getGraphics();
     this.screen = gui.getScreen();
-    this.a = new Start(width,height);
+    this.board = board;
   }
   
   public void draw() throws IOException {
     screen.clear();
-    a.draw(graphics);
+    board.draw(graphics);
     screen.refresh();
   }
-  
 }

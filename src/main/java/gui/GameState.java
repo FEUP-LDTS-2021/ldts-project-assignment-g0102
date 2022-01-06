@@ -13,9 +13,7 @@ public class GameState {
   }
   
   public void run() throws IOException {
-    while(!a.processKey()){};
-      b.run();
+    a.run();
+    b.run();
   }
-  
-  
 }

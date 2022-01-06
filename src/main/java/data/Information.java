@@ -10,7 +10,7 @@ public class Information {
   private int lives;
   private int level;
 
-  Information(int score, int lives, int level) {
+  public Information(int score, int lives, int level) {
     this.score = score;
     this.lives = lives;
     this.level = level;

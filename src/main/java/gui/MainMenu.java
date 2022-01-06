@@ -1,6 +1,7 @@
 package gui;
 
 import com.googlecode.lanterna.input.KeyStroke;
+import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 
 import java.io.IOException;
@@ -15,20 +16,17 @@ public class MainMenu {
     this.screen = gui.getScreen();
   }
   
-  public boolean processKey() throws IOException {
-    v.draw();
-    KeyStroke key = screen.readInput();
+  public void run() throws IOException {
+    KeyStroke key;
     
-    switch (key.getKeyType()) {
-      case EOF:
+    do{
+      v.draw();
+      key = screen.readInput();
+      if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'q')
         screen.stopScreen();
-      case Character:
-        if(key.getCharacter() == 'q')
-          screen.stopScreen();
-        if(key.getCharacter() == ' ')
-          return true;
-      default: return false;
-    }
-    
+      if(key.getKeyType() == KeyType.Character && key.getCharacter() == ' ')
+        break;
+      
+    }while(key.getKeyType() != KeyType.EOF);
   }
 }

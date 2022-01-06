@@ -1,9 +1,7 @@
 package data;
 
 import com.googlecode.lanterna.input.KeyStroke;
-import data.Alien;
-import data.Board;
-import data.Position;
+import gui.Stages.Board;
 import org.junit.jupiter.api.Test;
 
 import static com.googlecode.lanterna.input.KeyType.*;
