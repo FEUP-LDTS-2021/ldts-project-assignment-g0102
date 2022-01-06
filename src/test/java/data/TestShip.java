@@ -1,3 +1,7 @@
+package data;
+
+import data.Position;
+import data.Ship;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;

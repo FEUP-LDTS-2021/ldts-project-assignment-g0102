@@ -1,8 +1,11 @@
+package data;
+
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
+import data.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +19,7 @@ public class Board {
   private boolean canAlienGoRight = true;
   private Information informations;
   
-  Board(int x, int y){
+  public Board(int x, int y){
     width = x;
     height = y;
     ship = new Ship(49,50);

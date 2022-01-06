@@ -1,6 +1,8 @@
+package data;
+
 import com.googlecode.lanterna.*;
 import com.googlecode.lanterna.graphics.TextGraphics;
-import com.googlecode.lanterna.screen.Screen;
+import data.Position;
 
 public class Ship {
   

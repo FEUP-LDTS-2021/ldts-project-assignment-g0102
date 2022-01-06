@@ -6,6 +6,8 @@ import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.screen.TerminalScreen;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
+import data.Board;
+import data.Position;
 
 import java.io.IOException;
 
@@ -28,6 +30,7 @@ public class Game {
       e.printStackTrace();
     }
   }
+  
   public void draw() throws IOException{
     screen.clear();
     board.draw(screen.newTextGraphics());

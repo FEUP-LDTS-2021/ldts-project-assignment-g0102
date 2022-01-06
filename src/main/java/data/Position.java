@@ -1,3 +1,5 @@
+package data;
+
 public class Position {
   private int x, y;
   Position(int x, int y){
