@@ -1,3 +1,7 @@
+package data;
+
+import data.Alien;
+import data.Position;
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.*;
 
