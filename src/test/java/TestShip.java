@@ -23,7 +23,7 @@ public class TestShip {
         assertEquals(20,ship.getX());
         assertEquals(40,ship.getY());
     }
-    //nao sei como fazer este teste
+
     @Test
     public void TestShipMoveLeft() {
         //given

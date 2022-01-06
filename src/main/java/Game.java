@@ -15,10 +15,10 @@ public class Game {
   
   public Game() {
     try {
-      TerminalSize terminalSize = new TerminalSize(100, 50);
+      TerminalSize terminalSize = new TerminalSize(100, 60);
       DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory().setInitialTerminalSize(terminalSize);
       Terminal terminal = terminalFactory.createTerminal();
-      board = new Board(100,50);
+      board = new Board(100,60);
       screen = new TerminalScreen(terminal);
       TextGraphics graphics = screen.newTextGraphics();
       screen.setCursorPosition(null); // we don't need a cursor

@@ -43,6 +43,7 @@ public class TestPosition {
         //then
         assertEquals(result,tosetX);
     }
+
     @Test
     public void testSetY() {
         //given
