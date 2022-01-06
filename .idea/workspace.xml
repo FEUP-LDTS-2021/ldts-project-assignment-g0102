@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="188dd432-6d35-4fb0-a760-a217d4574229" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/GameView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/MainMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/MainMenuView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/colors/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Alien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Information.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Wall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestAlien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestAlien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestWall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestWall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Alien.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +88,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="gui" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Game">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

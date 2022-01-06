@@ -8,7 +8,7 @@ import com.googlecode.lanterna.graphics.TextGraphics;
 public class Alien {
   private Position position;
   
-  Alien(int x, int y){ position = new Position(x,y);}
+  public Alien(int x, int y){ position = new Position(x,y);}
   
   public int getX() {
     return position.getX();

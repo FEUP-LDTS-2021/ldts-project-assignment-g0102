@@ -8,6 +8,8 @@ import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
 import data.Board;
 import data.Position;
+import gui.GameState;
+import gui.GameView;
 
 import java.io.IOException;
 
@@ -30,7 +32,6 @@ public class Game {
       e.printStackTrace();
     }
   }
-  
   public void draw() throws IOException{
     screen.clear();
     board.draw(screen.newTextGraphics());
@@ -59,7 +60,8 @@ public class Game {
   }
   
   public static void main(String[] args) throws IOException {
-    Game a = new Game();
+    GameView gui = new GameView(100,60);
+    GameState a = new GameState(gui,100,60);
     a.run();
   }
 }
