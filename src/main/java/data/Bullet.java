@@ -8,14 +8,16 @@ import com.googlecode.lanterna.graphics.TextGraphics;
 public class Bullet {
     private Position position;
 
-    Bullet(int x, int y){ position = new Position(x,y); }
+    public Bullet(int x, int y){ position = new Position(x,y); }
 
     public int getX() {return position.getX(); }
     public int getY() { return position.getY(); }
 
     public Position lower() { return new Position(position.getX(), position.getY()+1); }
     public Position rise() { return new Position(position.getX(), position.getY()-1); }
+
     public void setPosition(Position position) { this.position = position; }
+    public Position getPosition() { return this.position; }
 
     public void draw(TextGraphics graphics, int a) {
         graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));
