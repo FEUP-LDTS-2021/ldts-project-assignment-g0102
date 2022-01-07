@@ -20,12 +20,10 @@ public class Start {
   }
   
   public void draw(TextGraphics graphics) {
-    graphics.setBackgroundColor(TextColor.Factory.fromString("BLACK"));
     graphics.enableModifiers(SGR.BOLD);
     graphics.enableModifiers(SGR.BLINK);
-    graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));
     graphics.putString(new TerminalPosition(35,25), "Welcome to Space Invaders!!");
-    graphics.putString(new TerminalPosition(38,26), "To start press Space");
+    graphics.putString(new TerminalPosition(24,26), "Please press Space to help us get rid of all the aliens");
     graphics.disableModifiers(SGR.BLINK);
     for(Alien alien : aliens)
       alien.draw(graphics);
@@ -35,13 +33,22 @@ public class Start {
     Random a = new Random();
     int x, y;
     aliens = new ArrayList<>();
-    for(int i = 0; i < 50; i++){
-      do{
-        x = a.nextInt(100);
-        y = a.nextInt(60);
-      }while(x <= 61 && x >= 35 && y != 25 && y != 26);
+    while(aliens.size() != 30){
+      x = a.nextInt(99);
+      y = a.nextInt(60);
+      if(overlap(x,y))
+        continue;
       aliens.add(new Alien(x,y));
     }
     return aliens;
+  }
+  
+  private boolean overlap(int x, int y) {
+    if(x < 2 || x > 22 && x < 80 && y > 23 && y < 28)
+      return true;
+    for(Alien alien : aliens)
+      if(x == alien.getX() || x == alien.getX()-1 || y == alien.getY()-1 || y == alien.getY())
+        return true;
+    return false;
   }
 }
