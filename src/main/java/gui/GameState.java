@@ -13,12 +13,12 @@ public class GameState {
   public GameState(GameView gui, int width, int height){
     start = new MainMenu(gui);
     board = new MenuBoard(gui, width, height);
-    loss = new MenuLoss(gui, width, height);
+    loss = new MenuLoss(gui);
   }
   
   public void run() throws IOException {
     start.run();
     board.run();
-    //loss.run();
+    loss.run();
   }
 }

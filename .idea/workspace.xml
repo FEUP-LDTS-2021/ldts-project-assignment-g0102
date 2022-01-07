@@ -12,7 +12,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/stages/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/stages/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuLoss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuLoss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/stages/Loss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Loss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/stages/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/viewers/MenuLossView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/MenuLossView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

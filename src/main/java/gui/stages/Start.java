@@ -2,7 +2,6 @@ package gui.stages;
 
 import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.TerminalPosition;
-import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import data.Alien;
@@ -20,6 +19,7 @@ public class Start {
   }
   
   public void draw(TextGraphics graphics) {
+    graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));
     graphics.enableModifiers(SGR.BOLD);
     graphics.enableModifiers(SGR.BLINK);
     graphics.putString(new TerminalPosition(35,25), "Welcome to Space Invaders!!");
