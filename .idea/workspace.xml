@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="188dd432-6d35-4fb0-a760-a217d4574229" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/MenuLoss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Loss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/MenuLossView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,27 +14,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/GameView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MainMenuView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MenuBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/MenuBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/MenuBoardView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/Stages/Board$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/Stages/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/Stages/Start.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestBoard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestBoard.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/MainMenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuBoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/MenuBoardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Stages/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Stages/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/data/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestGame.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +102,7 @@
       <recent name="gui" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Game">
+  <component name="RunManager" selected="Gradle.TestGameView.TestGetScreen">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Game" />
       <module name="LDTS_PROJ1.main" />
@@ -168,12 +154,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestWall.TestWallConstructor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestGameView.TestGetScreen" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestWall.TestWallConstructor&quot;" />
+        <option name="scriptParameters" value="--tests &quot;gui.viewers.TestGameView.TestGetScreen&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -212,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestGameView.TestGetScreen" />
         <item itemvalue="Gradle.TestBoard" />
         <item itemvalue="Gradle.TestAlien" />
         <item itemvalue="Application.Game" />
         <item itemvalue="Gradle.TestWall.TestWallGetPosition" />
-        <item itemvalue="Gradle.TestWall.TestWallConstructor" />
       </list>
     </recent_temporary>
   </component>
@@ -241,6 +227,7 @@
       <workItem from="1641384077522" duration="1658000" />
       <workItem from="1641386207648" duration="276000" />
       <workItem from="1641386514171" duration="9129000" />
+      <workItem from="1641507798393" duration="8394000" />
     </task>
     <servers />
   </component>
@@ -257,20 +244,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestBoard_testProcessKeyLeft.ic" NAME="TestBoard.testProcessKeyLeft Coverage Results" MODIFIED="1641385736399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestWall_TestWallConstructor.ic" NAME="TestWall.TestWallConstructor Coverage Results" MODIFIED="1641467993616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestPosition_testSetY.ic" NAME="TestPosition.testSetY Coverage Results" MODIFIED="1641465951772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestPosition.ic" NAME="TestPosition Coverage Results" MODIFIED="1641419540736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestBoard_testProcessKeyRandom.ic" NAME="TestBoard.testProcessKeyRandom Coverage Results" MODIFIED="1641419173625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestPosition_testPositionConstructor.ic" NAME="TestPosition.testPositionConstructor Coverage Results" MODIFIED="1641465679476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestPosition_testSetX.ic" NAME="TestPosition.testSetX Coverage Results" MODIFIED="1641465912550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestInformation.ic" NAME="TestInformation Coverage Results" MODIFIED="1641465645903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestInformation_testGetScore.ic" NAME="TestInformation.testGetScore Coverage Results" MODIFIED="1641389854262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestPosition_testPositionConstructor.ic" NAME="TestPosition.testPositionConstructor Coverage Results" MODIFIED="1641465679476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestPosition_testSetY.ic" NAME="TestPosition.testSetY Coverage Results" MODIFIED="1641465951772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestPosition.ic" NAME="TestPosition Coverage Results" MODIFIED="1641419540736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestBoard.ic" NAME="TestBoard Coverage Results" MODIFIED="1641423963754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestAlien.ic" NAME="TestAlien Coverage Results" MODIFIED="1641418643848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestWall_TestWallGetPosition.ic" NAME="TestWall.TestWallGetPosition Coverage Results" MODIFIED="1641468429501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestBoard_testProcessKeyRandom.ic" NAME="TestBoard.testProcessKeyRandom Coverage Results" MODIFIED="1641419173625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestBoard.ic" NAME="TestBoard Coverage Results" MODIFIED="1641423963754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestBoard_testProcessKeyLeft.ic" NAME="TestBoard.testProcessKeyLeft Coverage Results" MODIFIED="1641385736399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestInformation_testGetLive.ic" NAME="TestInformation.testGetLive Coverage Results" MODIFIED="1641390717383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/LDTS_PROJ1$TestWall_TestWallGetPosition.ic" NAME="TestWall.TestWallGetPosition Coverage Results" MODIFIED="1641468429501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
