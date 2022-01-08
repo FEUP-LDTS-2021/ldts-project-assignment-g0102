@@ -1,5 +1,9 @@
 package data;
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 public class TestBullet {
     @Test
     public void testBulletConstructor(){
