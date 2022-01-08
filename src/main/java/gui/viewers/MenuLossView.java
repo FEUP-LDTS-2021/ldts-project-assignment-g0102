@@ -12,6 +12,7 @@ public class MenuLossView {
   private Loss l;
   
   public MenuLossView(GameView gui) {
+    this.l = new Loss();
     this.graphics = gui.getGraphics();
     this.screen = gui.getScreen();
   }

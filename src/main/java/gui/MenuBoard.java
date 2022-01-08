@@ -1,6 +1,5 @@
 package gui;
 
-import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
@@ -29,6 +28,8 @@ public class MenuBoard {
       key = screen.readInput();
       if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'q')
         screen.stopScreen();
+      if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'l')
+        break;
       board.processKey(key);
     }while(key.getKeyType() != KeyType.EOF);
   }
