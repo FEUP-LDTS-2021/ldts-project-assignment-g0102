@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestBoard" tests="14" skipped="0" failures="0" errors="0" timestamp="2022-01-06T12:09:54" hostname="diogo-IdeaPro" time="0.034">
+  <properties/>
+  <testcase name="testMoveAlienRightFar()" classname="TestBoard" time="0.015"/>
+  <testcase name="testCanShipMoveLeft()" classname="TestBoard" time="0.001"/>
+  <testcase name="testCanShipMoveTrue()" classname="TestBoard" time="0.001"/>
+  <testcase name="testBoardConstructor()" classname="TestBoard" time="0.001"/>
+  <testcase name="testMoveShip()" classname="TestBoard" time="0.001"/>
+  <testcase name="testCanShipMoveRight()" classname="TestBoard" time="0.001"/>
+  <testcase name="testMoveAlienDown()" classname="TestBoard" time="0.0"/>
+  <testcase name="testMoveAlienLeft()" classname="TestBoard" time="0.001"/>
+  <testcase name="testProcessKeyRandom()" classname="TestBoard" time="0.003"/>
+  <testcase name="testMoveAlienRight()" classname="TestBoard" time="0.001"/>
+  <testcase name="testProcessKeyRight()" classname="TestBoard" time="0.001"/>
+  <testcase name="testMoveAlienLeftFar()" classname="TestBoard" time="0.001"/>
+  <testcase name="testSetPosition()" classname="TestBoard" time="0.001"/>
+  <testcase name="testProcessKeyLeft()" classname="TestBoard" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

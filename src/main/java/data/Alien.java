@@ -41,7 +41,6 @@ public class Alien {
   public void setPosition(Position position) {
     this.position = position;
   }
-  public Position getPosition() { return this.position; }
   
   public boolean close() {
     return position.getX() - 2 <= 0;
