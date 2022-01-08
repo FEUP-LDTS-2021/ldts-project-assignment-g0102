@@ -7,6 +7,8 @@ import com.googlecode.lanterna.graphics.TextGraphics;
 
 public class Loss {
   
+  public Loss(){};
+  
   public void draw(TextGraphics graphics) {
     graphics.setBackgroundColor(TextColor.Factory.fromString("BLACK"));
     graphics.enableModifiers(SGR.BOLD);

@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="188dd432-6d35-4fb0-a760-a217d4574229" name="Changes" comment="" />
+=======
+    <list default="true" id="188dd432-6d35-4fb0-a760-a217d4574229" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/stages/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/stages/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuLoss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuLoss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/stages/Loss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Loss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/stages/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/stages/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/viewers/MenuLossView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/viewers/MenuLossView.java" afterDir="false" />
+    </list>
+>>>>>>> ca4d7624a53e5d738b0dbaee97df5e6ae9d936e4
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
