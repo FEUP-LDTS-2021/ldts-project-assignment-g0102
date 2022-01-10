@@ -21,16 +21,19 @@ public class MenuBoard {
     this.a = new MenuBoardView(gui, board);
   }
   
-  public void run() throws IOException {
+  public int run() throws IOException {
     KeyStroke key;
     do {
       a.draw();
       key = screen.readInput();
       if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'q')
         screen.stopScreen();
-      if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'l')
-        break;
+      if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'l' || board.isGameOver() == 1)
+        return 1;
+      if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'w' || board.isGameOver() == 2)
+        return 2;
       board.processKey(key);
     }while(key.getKeyType() != KeyType.EOF);
+    return 0;
   }
 }

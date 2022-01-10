@@ -10,7 +10,7 @@ public class GameState {
   MenuBoard board;
   MenuLoss loss;
   MenuWin win;
-  
+  int i;
   public GameState(GameView gui, int width, int height){
     start = new MainMenu(gui);
     board = new MenuBoard(gui, width, height);
@@ -20,8 +20,8 @@ public class GameState {
   
   public void run() throws IOException {
     start.run();
-    board.run();
-    loss.run();
-    win.run();
+    i = board.run();
+    if(i==1) loss.run();
+    else win.run();
   }
 }
