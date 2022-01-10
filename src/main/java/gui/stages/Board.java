@@ -5,10 +5,12 @@ import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
+import com.googlecode.lanterna.input.KeyType;
 import data.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Board {
   
@@ -20,6 +22,10 @@ public class Board {
   private final Alien right = new Alien(36,16);
   private boolean canAlienGoRight = true;
   private Information informations;
+  private Bullet bulletS;
+  private boolean shipBullet = true;
+  public Bullet bulletA;
+  private boolean alienBullet = true;
   
   public Board(int x, int y){
     width = x;
@@ -42,6 +48,10 @@ public class Board {
       case ArrowRight-> moveShip(ship.moveRight());
       default-> moveShip(ship.Stand());
     }
+    if(shipBullet) shooting(key);
+    if(!shipBullet) checkAlienCollision();
+    if(alienBullet) shooting();
+    if(!alienBullet) checkShipCollision();
     if(canAlienGoRight) {
       if (right.close(width)) moveAlienDown();
       moveAlienRight();
@@ -65,6 +75,8 @@ public class Board {
       alien.draw(graphics);
     ship.draw(graphics);
     informations.draw(graphics);
+    if(!shipBullet) bulletS.draw(graphics,0);
+    if(!alienBullet) bulletA.draw(graphics,1);
   }
   
   public void setPosition(Position position){
@@ -121,6 +133,52 @@ public class Board {
   public void moveAlienRight() {
     for(Alien alien : aliens)
       alien.setPosition(alien.moveRight());
+  }
+
+  private void shooting() {
+    Random a = new Random();
+    int s = a.nextInt(aliens.size());
+    bulletA = new Bullet(aliens.get(s).getX(), aliens.get(s).getY());
+    alienBullet = false;
+  }
+
+  private void shooting(KeyStroke key) {
+    if(key.getKeyType() == KeyType.Character && key.getCharacter() == ' ') {
+      bulletS = new Bullet(ship.getX(), ship.getY()-2);
+      shipBullet = false;
+    }
+  }
+
+  private void checkAlienCollision() {
+    if(bulletS.getY() == 8) shipBullet = true;
+    if (possiblePositions(aliens)) {
+      informations.scoreUp();
+      shipBullet = true;
+    }
+    bulletS.setPosition(bulletS.rise());
+  }
+
+  private void checkShipCollision() {
+    if(bulletA.getY() == 51) alienBullet = true;
+    if(bulletA.getX() == ship.getX() && bulletA.getY() == ship.getY()) {
+      informations.liveHit();
+      alienBullet = true;
+    }
+    bulletA.setPosition(bulletA.lower());
+  }
+
+  private boolean possiblePositions(List<Alien> aliens) {
+    for(Alien alien : aliens) {
+      if (alien.getPosition().equals(bulletS.getPosition())) return true;
+      int a = alien.getX() - 1, b = alien.getY() - 1;
+      for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+          if ((a + i) == bulletS.getX() && (b + j) == bulletS.getY()) {
+            aliens.remove(alien);
+            return true;
+          }
+    }
+    return false;
   }
   
   public int isGameOver() {
