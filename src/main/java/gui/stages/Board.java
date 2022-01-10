@@ -16,8 +16,8 @@ public class Board {
   private Ship ship;
   private List<Wall> walls;
   private List<Alien> aliens;
-  private final Alien left = new Alien(1,8);                      // transformar numa lista
-  private final Alien right = new Alien(36,8);
+  private final Alien left = new Alien(1,16);
+  private final Alien right = new Alien(36,16);
   private boolean canAlienGoRight = true;
   private Information informations;
   
@@ -121,5 +121,12 @@ public class Board {
   public void moveAlienRight() {
     for(Alien alien : aliens)
       alien.setPosition(alien.moveRight());
+  }
+  
+  public int isGameOver() {
+    if(informations.getLevel() == 6) return 2;
+    if(informations.getLives() == 0) return 1;
+    if (right.getY() == (ship.getY()-5)) return 1;
+    return 0;
   }
 }
