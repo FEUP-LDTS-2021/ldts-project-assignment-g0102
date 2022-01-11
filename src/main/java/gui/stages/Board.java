@@ -18,8 +18,8 @@ public class Board {
   private Ship ship;
   private List<Wall> walls;
   private List<Alien> aliens;
-  private final Alien left = new Alien(1,16);
-  private final Alien right = new Alien(36,16);
+  private Alien left;
+  private Alien right;
   private boolean canAlienGoRight = true;
   private Information informations;
   private Bullet bulletS;
@@ -55,15 +55,13 @@ public class Board {
     if(canAlienGoRight) {
       if (right.close(width)) moveAlienDown();
       moveAlienRight();
-      left.setPosition(left.moveRight());
-      right.setPosition(right.moveRight());
     }
     else {
       if (left.close()) moveAlienDown();
       moveAlienLeft();
-      left.setPosition(left.moveLeft());
-      right.setPosition(right.moveLeft());
     }
+    if(aliens.size() == 0 && informations.getLevel() != 5) levelUp();
+    if(aliens.size() == 0 && informations.getLevel() == 5) informations.levelUp();
   }
   
   public void draw(TextGraphics graphics){
@@ -110,6 +108,8 @@ public class Board {
   }
   
   private List<Alien> createAliens() {
+    left = new Alien(1,16);
+    right = new Alien(36,16);
     aliens = new ArrayList<>();
     for(int i = 0; i < 10; i += 2)
       for(int j = 1; j < 40; j += 5){
@@ -126,11 +126,15 @@ public class Board {
   }
   
   public void moveAlienLeft() {
+    left.setPosition(left.moveLeft());
+    right.setPosition(right.moveLeft());
     for(Alien alien : aliens)
       alien.setPosition(alien.moveLeft());
   }
   
   public void moveAlienRight() {
+    left.setPosition(left.moveRight());
+    right.setPosition(right.moveRight());
     for(Alien alien : aliens)
       alien.setPosition(alien.moveRight());
   }
@@ -186,5 +190,10 @@ public class Board {
     if(informations.getLives() == 0) return 1;
     if (right.getY() == (ship.getY()-5)) return 1;
     return 0;
+  }
+  
+  private void levelUp() {
+    informations.levelUp();
+    createAliens();
   }
 }
