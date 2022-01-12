@@ -33,7 +33,7 @@ public class Board {
     ship = new Ship(49,50);
     this.walls = createWalls();
     this.aliens = createAliens();
-    this.informations = new Information(0,3,1);
+    this.informations = new Information(0,3,1,1);
   }
   
   public int getWidth(){return width;}
@@ -194,6 +194,7 @@ public class Board {
   
   private void levelUp() {
     informations.levelUp();
+    if(informations.getLives() < 3) informations.OneUp();
     createAliens();
   }
 }
