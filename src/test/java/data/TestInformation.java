@@ -1,21 +1,20 @@
 package data;
 
-import org.junit.Assert;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class TestInformation {
     
-    private final Information info = new Information(0,3,1,1);
+    private final Information info = new Information(0,3,1,1,5);
     
     @Test
     public void testInformationConstructor(){
         assertEquals(0,info.getScore());
         assertEquals(3,info.getLives());
         assertEquals(1,info.getLevel());
-        assertEquals(1,info.getBullet());
+        assertEquals(1,info.getShipBullet());
+        assertEquals(5,info.getAlienbullet());
     }
 
     @Test
@@ -38,17 +37,19 @@ public class TestInformation {
     
     @Test
     public void testGetBullet() {
-        int bullet = info.getBullet();
+        int bullet = info.getShipBullet();
         assertEquals(1,bullet);
     }
     
     @Test
     public void testLevelUp(){
         assertEquals(1, info.getLevel());
-        assertEquals(1, info.getBullet());
+        assertEquals(1, info.getShipBullet());
+        assertEquals(5, info.getAlienbullet());
         info.levelUp();
         assertEquals(2, info.getLevel());
-        assertEquals(2, info.getBullet());
+        assertEquals(2, info.getShipBullet());
+        assertEquals(7, info.getAlienbullet());
     }
 
     @Test

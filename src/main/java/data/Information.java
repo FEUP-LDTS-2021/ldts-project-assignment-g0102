@@ -9,13 +9,15 @@ public class Information {
   private int score;
   private int lives;
   private int level;
-  private int bullet;
+  private int Shipbullet;
+  private int Alienbullet;
 
-  public Information(int score, int lives, int level, int bullet) {
+  public Information(int score, int lives, int level, int Shipbullet, int Alienbullet) {
     this.score = score;
     this.lives = lives;
     this.level = level;
-    this.bullet = bullet;
+    this.Shipbullet = Shipbullet;
+    this.Alienbullet = Alienbullet;
   }
 
   public int getLives() {
@@ -26,9 +28,11 @@ public class Information {
 
   public int getLevel() { return level;}
   
-  public int getBullet() { return bullet;}
+  public int getShipBullet() { return Shipbullet;}
+  
+  public int getAlienbullet() { return Alienbullet;}
 
-  public void levelUp(){ level++ ; bullet++ ;}
+  public void levelUp(){ level++ ; Shipbullet++ ; Alienbullet += 2; }
 
   public void scoreUp(){
     score += 100;
@@ -73,7 +77,7 @@ public class Information {
     graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));
     graphics.enableModifiers(SGR.BOLD);
     graphics.putString(new TerminalPosition(65,55), "Number of Bullets:");
-    for(int i = 0; i < bullet * 2; i += 2) {
+    for(int i = 0; i < Shipbullet * 2; i += 2) {
       graphics.putString(new TerminalPosition((84 + i),54), "^");
       graphics.putString(new TerminalPosition((84 + i),55), "|");
     }
