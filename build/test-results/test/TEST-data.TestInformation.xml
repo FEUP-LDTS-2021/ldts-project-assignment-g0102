@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="data.TestInformation" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-01-14T14:28:30" hostname="diogo-IdeaPro" time="0.01">
+<testsuite name="data.TestInformation" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-14T21:48:08" hostname="diogo-IdeaPro" time="0.009">
   <properties/>
-  <testcase name="testInformationConstructor()" classname="data.TestInformation" time="0.001"/>
-  <testcase name="testGetLevel()" classname="data.TestInformation" time="0.0"/>
-  <testcase name="testGetLives()" classname="data.TestInformation" time="0.0"/>
-  <testcase name="testGetScore()" classname="data.TestInformation" time="0.0"/>
-  <testcase name="testOneUp()" classname="data.TestInformation" time="0.0"/>
-  <testcase name="testLevelUp()" classname="data.TestInformation" time="0.0"/>
-  <testcase name="testLiveHit()" classname="data.TestInformation" time="0.001"/>
-  <testcase name="testGetBullet()" classname="data.TestInformation" time="0.001"/>
-  <testcase name="testScoreUp()" classname="data.TestInformation" time="0.001"/>
+  <testcase name="testOneUp()" classname="data.TestInformation" time="0.009"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

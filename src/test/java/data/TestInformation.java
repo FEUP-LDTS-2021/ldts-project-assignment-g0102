@@ -65,13 +65,4 @@ public class TestInformation {
         info.liveHit();
         assertEquals(2,info.getLives());
     }
-    
-    @Test
-    public void testOneUp(){
-        info.liveHit();
-        info.liveHit();
-        assertEquals(1,info.getLives());
-        info.OneUp();
-        assertEquals(2,info.getLives());
-    }
 }

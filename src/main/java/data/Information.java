@@ -38,8 +38,6 @@ public class Information {
     score += 100;
   }
   
-  public void OneUp() { lives++;}
-  
   public void liveHit() { lives--;}
 
 
