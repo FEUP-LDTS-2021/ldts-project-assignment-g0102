@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="data.TestShip" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-01-14T14:28:30" hostname="diogo-IdeaPro" time="0.005">
+  <properties/>
+  <testcase name="TestShipConstructor()" classname="data.TestShip" time="0.001"/>
+  <testcase name="TestShipStand()" classname="data.TestShip" time="0.001"/>
+  <testcase name="TestShipSetters()" classname="data.TestShip" time="0.001"/>
+  <testcase name="TestShipMoveLeft()" classname="data.TestShip" time="0.0"/>
+  <testcase name="TestShipMoveRight()" classname="data.TestShip" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
