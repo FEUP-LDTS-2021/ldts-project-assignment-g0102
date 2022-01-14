@@ -22,10 +22,8 @@ public class Board {
   private Alien right;
   private boolean canAlienGoRight = true;
   private Information informations;
-  private Bullet bulletS;
-  private boolean shipBullet = true;
-  public Bullet bulletA;
-  private boolean alienBullet = true;
+  private List<Bullet> bulletS = new ArrayList<>();
+  public List<Bullet> bulletA = new ArrayList<>();
   
   public Board(int x, int y){
     width = x;
@@ -33,7 +31,7 @@ public class Board {
     ship = new Ship(49,50);
     this.walls = createWalls();
     this.aliens = createAliens();
-    this.informations = new Information(0,3,1,1);
+    this.informations = new Information(0,3,1,1,5);
   }
   
   public int getWidth(){return width;}
@@ -48,10 +46,10 @@ public class Board {
       case ArrowRight-> moveShip(ship.moveRight());
       default-> moveShip(ship.Stand());
     }
-    if(shipBullet) shooting(key);
-    if(!shipBullet) checkAlienCollision();
-    if(alienBullet) shooting();
-    if(!alienBullet) checkShipCollision();
+    if(bulletS.size() < informations.getShipBullet()) shooting(key);
+    if(bulletS.size() > 0) checkAlienCollision();
+    if(bulletA.size() < informations.getAlienbullet()) shooting();
+    if(bulletA.size() > 0) checkShipCollision();
     if(canAlienGoRight) {
       if (right.close(width)) moveAlienDown();
       moveAlienRight();
@@ -73,8 +71,12 @@ public class Board {
       alien.draw(graphics);
     ship.draw(graphics);
     informations.draw(graphics);
-    if(!shipBullet) bulletS.draw(graphics,0);
-    if(!alienBullet) bulletA.draw(graphics,1);
+    if(bulletS.size() > 0)
+      for(Bullet s : bulletS)
+        s.draw(graphics,0);
+    if(bulletA.size() > 0)
+      for(Bullet b : bulletA)
+        b.draw(graphics,1);
   }
   
   public void setPosition(Position position){
@@ -142,45 +144,56 @@ public class Board {
   private void shooting() {
     Random a = new Random();
     int s = a.nextInt(aliens.size());
-    bulletA = new Bullet(aliens.get(s).getX(), aliens.get(s).getY());
-    alienBullet = false;
+    bulletA.add(new Bullet(aliens.get(s).getX(), aliens.get(s).getY()));
   }
 
   private void shooting(KeyStroke key) {
-    if(key.getKeyType() == KeyType.Character && key.getCharacter() == ' ') {
-      bulletS = new Bullet(ship.getX(), ship.getY()-2);
-      shipBullet = false;
-    }
+    if(key.getKeyType() == KeyType.Character && key.getCharacter() == ' ')
+      bulletS.add(new Bullet(ship.getX(), ship.getY()-2));
   }
 
   private void checkAlienCollision() {
-    if(bulletS.getY() == 8) shipBullet = true;
-    if (possiblePositions(aliens)) {
-      informations.scoreUp();
-      shipBullet = true;
+    for(Bullet s : bulletS) {
+      if (s.getY() == 8) {
+        bulletS.remove(s);
+        break;
+      }
+      if (possiblePositions(aliens)) {
+        informations.scoreUp();
+        bulletS.remove(s);
+        break;
+      }
+      s.setPosition(s.rise());
     }
-    bulletS.setPosition(bulletS.rise());
   }
 
   private void checkShipCollision() {
-    if(bulletA.getY() == 51) alienBullet = true;
-    if(bulletA.getX() == ship.getX() && bulletA.getY() == ship.getY()) {
-      informations.liveHit();
-      alienBullet = true;
+    for(Bullet b : bulletA) {
+      if (b.getY() == 51) {
+        bulletA.remove(b);
+        break;
+      }
+      if (b.getX() == ship.getX() && b.getY() == ship.getY()) {
+        informations.liveHit();
+        bulletA.remove(b);
+        break;
+      }
+      b.setPosition(b.lower());
     }
-    bulletA.setPosition(bulletA.lower());
   }
 
   private boolean possiblePositions(List<Alien> aliens) {
-    for(Alien alien : aliens) {
-      if (alien.getPosition().equals(bulletS.getPosition())) return true;
-      int a = alien.getX() - 1, b = alien.getY() - 1;
-      for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-          if ((a + i) == bulletS.getX() && (b + j) == bulletS.getY()) {
-            aliens.remove(alien);
-            return true;
-          }
+    for(Bullet s : bulletS) {
+      for (Alien alien : aliens) {
+        if (alien.getPosition().equals(s.getPosition())) return true;
+        int a = alien.getX() - 1, b = alien.getY() - 1;
+        for (int i = 0; i < 3; i++)
+          for (int j = 0; j < 3; j++)
+            if ((a + i) == s.getX() && (b + j) == s.getY()) {
+              aliens.remove(alien);
+              return true;
+            }
+      }
     }
     return false;
   }

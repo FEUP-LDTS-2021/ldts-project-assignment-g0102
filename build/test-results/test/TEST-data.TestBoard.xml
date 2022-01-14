@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="data.TestBoard" tests="14" skipped="0" failures="0" errors="0" timestamp="2022-01-14T14:28:30" hostname="diogo-IdeaPro" time="0.022">
+  <properties/>
+  <testcase name="testMoveAlienRightFar()" classname="data.TestBoard" time="0.004"/>
+  <testcase name="testCanShipMoveLeft()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testCanShipMoveTrue()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testBoardConstructor()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testMoveShip()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testCanShipMoveRight()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testMoveAlienDown()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testMoveAlienLeft()" classname="data.TestBoard" time="0.001"/>
+  <testcase name="testProcessKeyRandom()" classname="data.TestBoard" time="0.006"/>
+  <testcase name="testMoveAlienRight()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testProcessKeyRight()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testMoveAlienLeftFar()" classname="data.TestBoard" time="0.001"/>
+  <testcase name="testSetPosition()" classname="data.TestBoard" time="0.0"/>
+  <testcase name="testProcessKeyLeft()" classname="data.TestBoard" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
