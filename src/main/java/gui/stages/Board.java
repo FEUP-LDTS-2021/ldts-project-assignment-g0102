@@ -47,19 +47,6 @@ public class Board {
       default-> moveShip(ship.Stand());
     }
     if(bulletS.size() < informations.getShipBullet()) shooting(key);
-    if(bulletS.size() > 0) checkAlienCollision();
-    if(bulletA.size() < informations.getAlienbullet()) shooting();
-    if(bulletA.size() > 0) checkShipCollision();
-    if(canAlienGoRight) {
-      if (right.close(width)) moveAlienDown();
-      moveAlienRight();
-    }
-    else {
-      if (left.close()) moveAlienDown();
-      moveAlienLeft();
-    }
-    if(aliens.size() == 0 && informations.getLevel() != 5) levelUp();
-    if(aliens.size() == 0 && informations.getLevel() == 5) informations.levelUp();
   }
   
   public void draw(TextGraphics graphics){
@@ -77,6 +64,22 @@ public class Board {
     if(bulletA.size() > 0)
       for(Bullet b : bulletA)
         b.draw(graphics,1);
+  }
+  
+  public void running(){
+    if(bulletS.size() > 0) checkAlienCollision();
+    if(bulletA.size() < informations.getAlienbullet()) shooting();
+    if(bulletA.size() > 0) checkShipCollision();
+    if(canAlienGoRight) {
+      if (right.close(width)) moveAlienDown();
+      moveAlienRight();
+    }
+    else {
+      if (left.close()) moveAlienDown();
+      moveAlienLeft();
+    }
+    if(aliens.size() == 0 && informations.getLevel() != 5) levelUp();
+    if(aliens.size() == 0 && informations.getLevel() == 5) informations.levelUp();
   }
   
   public void setPosition(Position position){
@@ -205,9 +208,16 @@ public class Board {
     return 0;
   }
   
+  public void hit(){
+    informations.liveHit();
+  }
+  
+  public void up(){
+    informations.levelUp();
+  }
+  
   private void levelUp() {
     informations.levelUp();
-    if(informations.getLives() < 3) informations.OneUp();
     createAliens();
   }
 }
