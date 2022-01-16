@@ -8,6 +8,7 @@ import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
 import com.googlecode.lanterna.terminal.swing.AWTTerminalFontConfiguration;
 
+
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -20,6 +21,9 @@ public class GameView {
     AWTTerminalFontConfiguration fontConfig = loadFontASB();
     TerminalSize terminalSize = new TerminalSize(width, height);
     DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory().setInitialTerminalSize(terminalSize);
+    terminalFactory.setForceAWTOverSwing(true);
+    terminalFactory.setTerminalEmulatorFontConfiguration(fontConfig);
+
     Terminal terminal = terminalFactory.createTerminal();
     
     screen = new TerminalScreen(terminal);
