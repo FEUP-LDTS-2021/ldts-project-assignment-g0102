@@ -27,10 +27,6 @@ public class MenuBoard {
       a.draw();
       key = screen.pollInput();
       if(key == null) break;
-      if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'q') {
-        board.kill();
-        screen.stopScreen();
-      }
       if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'l' || board.isGameOver() == 1)
         board.hit();
       if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'w' || board.isGameOver() == 2)

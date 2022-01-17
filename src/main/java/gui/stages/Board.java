@@ -104,7 +104,7 @@ public class Board {
   }
   
   private List<Wall> createWalls() {
-    List<Wall> walls = new ArrayList<>();
+    walls = new ArrayList<>();
     for(int i = 0; i < width; i++) {
       walls.add(new Wall(i,5));
       walls.add(new Wall(i,52));
