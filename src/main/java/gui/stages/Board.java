@@ -23,7 +23,7 @@ public class Board {
   private boolean canAlienGoRight = true;
   private Information informations;
   private List<Bullet> bulletS = new ArrayList<>();
-  public List<Bullet> bulletA = new ArrayList<>();
+  private List<Bullet> bulletA = new ArrayList<>();
   
   public Board(int x, int y){
     width = x;
@@ -219,10 +219,5 @@ public class Board {
     informations.levelUp();
     if(informations.getLives() < 3) informations.oneUp();
     createAliens();
-  }
-  
-  public void kill() {
-    for(int i=0; i<3 ; i++)
-      informations.liveHit();
   }
 }
