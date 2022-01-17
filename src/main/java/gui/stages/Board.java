@@ -31,7 +31,7 @@ public class Board {
     ship = new Ship(49,50);
     this.walls = createWalls();
     this.aliens = createAliens();
-    this.informations = new Information(0,3,1,1,5);
+    this.informations = new Information(0,3,1,1,3);
   }
   
   public int getWidth(){return width;}
@@ -146,6 +146,7 @@ public class Board {
 
   private void shooting() {
     Random a = new Random();
+    if(aliens.size() == 0) return;
     int s = a.nextInt(aliens.size());
     bulletA.add(new Bullet(aliens.get(s).getX(), aliens.get(s).getY()));
   }
@@ -212,12 +213,14 @@ public class Board {
     informations.liveHit();
   }
   
-  public void up(){
+  public void levelUp() {
     informations.levelUp();
+    if(informations.getLives() < 3) informations.oneUp();
+    createAliens();
   }
   
-  private void levelUp() {
-    informations.levelUp();
-    createAliens();
+  public void kill() {
+    for(int i=0; i<3 ; i++)
+      informations.liveHit();
   }
 }
