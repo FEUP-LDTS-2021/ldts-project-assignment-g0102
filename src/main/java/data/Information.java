@@ -39,6 +39,8 @@ public class Information {
   }
   
   public void liveHit() { lives--;}
+  
+  public void oneUp() {lives++;}
 
 
   public void draw(TextGraphics graphics) {

@@ -31,7 +31,7 @@ public class Board {
     ship = new Ship(49,50);
     this.walls = createWalls();
     this.aliens = createAliens();
-    this.informations = new Information(0,3,1,1,5);
+    this.informations = new Information(0,3,1,1,3);
   }
   
   public int getWidth(){return width;}
@@ -104,7 +104,7 @@ public class Board {
   }
   
   private List<Wall> createWalls() {
-    List<Wall> walls = new ArrayList<>();
+    walls = new ArrayList<>();
     for(int i = 0; i < width; i++) {
       walls.add(new Wall(i,5));
       walls.add(new Wall(i,52));
@@ -127,6 +127,8 @@ public class Board {
     for(Alien alien : aliens) {
       alien.setPosition(alien.moveDown());
     }
+    left.setPosition(left.moveDown());
+    right.setPosition(right.moveDown());
     canAlienGoRight = !canAlienGoRight;
   }
   
@@ -146,6 +148,7 @@ public class Board {
 
   private void shooting() {
     Random a = new Random();
+    if(aliens.size() == 0) return;
     int s = a.nextInt(aliens.size());
     bulletA.add(new Bullet(aliens.get(s).getX(), aliens.get(s).getY()));
   }
@@ -204,7 +207,7 @@ public class Board {
   public int isGameOver() {
     if(informations.getLevel() == 6) return 2;
     if(informations.getLives() == 0) return 1;
-    if (right.getY() == (ship.getY()-5)) return 1;
+    if (right.getY() == (ship.getY()-2)) return 1;
     return 0;
   }
   
@@ -212,12 +215,14 @@ public class Board {
     informations.liveHit();
   }
   
-  public void up(){
+  public void levelUp() {
     informations.levelUp();
+    if(informations.getLives() < 3) informations.oneUp();
+    createAliens();
   }
   
-  private void levelUp() {
-    informations.levelUp();
-    createAliens();
+  public void kill() {
+    for(int i=0; i<3 ; i++)
+      informations.liveHit();
   }
 }
