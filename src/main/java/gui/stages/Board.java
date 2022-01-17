@@ -127,6 +127,8 @@ public class Board {
     for(Alien alien : aliens) {
       alien.setPosition(alien.moveDown());
     }
+    left.setPosition(left.moveDown());
+    right.setPosition(right.moveDown());
     canAlienGoRight = !canAlienGoRight;
   }
   
@@ -205,7 +207,7 @@ public class Board {
   public int isGameOver() {
     if(informations.getLevel() == 6) return 2;
     if(informations.getLives() == 0) return 1;
-    if (right.getY() == (ship.getY()-5)) return 1;
+    if (right.getY() == (ship.getY()-2)) return 1;
     return 0;
   }
   
