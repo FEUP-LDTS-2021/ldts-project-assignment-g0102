@@ -26,8 +26,8 @@ public class Alien {
   public void draw(TextGraphics graphics) {
     graphics.setForegroundColor(TextColor.Factory.fromString("#FFC300"));
     graphics.enableModifiers(SGR.BOLD);
-    graphics.putString(new TerminalPosition(position.getX()-1, position.getY()-1), "()");
-    graphics.putString(new TerminalPosition(position.getX()-1, position.getY()), "9:");
+    graphics.putString(new TerminalPosition(position.getX()-1, position.getY()-1), "òó");
+    graphics.putString(new TerminalPosition(position.getX()-1, position.getY()), "ôõ");
   }
   
   public Position moveLeft() {

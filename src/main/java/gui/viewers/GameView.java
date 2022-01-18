@@ -28,7 +28,7 @@ public class GameView {
     graphics = screen.newTextGraphics();
   }
 
-  public Terminal createTerminal(int width, int height, AWTTerminalFontConfiguration fontConfig) throws IOException {
+  public Terminal createTerminal(int width, int height, AWTTerminalFontConfiguration fontConfig) throws IOException{
     Terminal terminal;
     TerminalSize terminalSize = new TerminalSize(width, height);
     DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory().setInitialTerminalSize(terminalSize);
@@ -40,7 +40,7 @@ public class GameView {
   }
 
   public AWTTerminalFontConfiguration loadFontASB() throws FontFormatException, IOException {
-    File fontFile = new File("src/main/resources/Fonts/ff.ttf");
+    File fontFile = new File("src/main/resources/Fonts/Finalff.ttf");
     Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 
     GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
