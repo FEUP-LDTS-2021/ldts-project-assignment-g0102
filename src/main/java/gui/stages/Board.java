@@ -23,7 +23,7 @@ public class Board {
   private boolean canAlienGoRight = true;
   private Information informations;
   private List<Bullet> bulletS = new ArrayList<>();
-  public List<Bullet> bulletA = new ArrayList<>();
+  private List<Bullet> bulletA = new ArrayList<>();
   
   public Board(int x, int y){
     width = x;
@@ -144,7 +144,7 @@ public class Board {
       alien.setPosition(alien.moveRight());
   }
 
-  private void shooting() {
+  public void shooting() {
     Random a = new Random();
     int s = a.nextInt(aliens.size());
     bulletA.add(new Bullet(aliens.get(s).getX(), aliens.get(s).getY()));
@@ -155,7 +155,7 @@ public class Board {
       bulletS.add(new Bullet(ship.getX(), ship.getY()-2));
   }
 
-  private void checkAlienCollision() {
+  public void checkAlienCollision() {
     for(Bullet s : bulletS) {
       if (s.getY() == 8) {
         bulletS.remove(s);
@@ -170,7 +170,7 @@ public class Board {
     }
   }
 
-  private void checkShipCollision() {
+  public void checkShipCollision() {
     for(Bullet b : bulletA) {
       if (b.getY() == 51) {
         bulletA.remove(b);
@@ -185,7 +185,7 @@ public class Board {
     }
   }
 
-  private boolean possiblePositions(List<Alien> aliens) {
+  public boolean possiblePositions(List<Alien> aliens) {
     for(Bullet s : bulletS) {
       for (Alien alien : aliens) {
         if (alien.getPosition().equals(s.getPosition())) return true;
@@ -211,12 +211,20 @@ public class Board {
   public void hit(){
     informations.liveHit();
   }
-  
+
+  public int infoGetLives(){
+    return informations.getLives();
+  }
+
   public void up(){
     informations.levelUp();
   }
-  
-  private void levelUp() {
+
+  public int infoGetLevel(){
+    return informations.getLevel();
+    }
+
+  public void levelUp() {
     informations.levelUp();
     createAliens();
   }

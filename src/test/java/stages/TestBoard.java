@@ -1,8 +1,15 @@
-package data;
+package stages;
 
 import com.googlecode.lanterna.input.KeyStroke;
+import data.Alien;
+import data.Bullet;
+import data.Position;
+import data.Ship;
 import gui.stages.Board;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.googlecode.lanterna.input.KeyType.*;
 import static org.junit.Assert.*;
@@ -117,47 +124,39 @@ public class TestBoard {
     }
 
     @Test
-    public void testShooting(){
-
-    }
-
-    @Test
-    public void testShootingPrees(){
-
-    }
-
-    @Test
-    public void testCheckAlienCollision(){
-
-    }
-
-    @Test
-    public void testCheckShipCollision(){
-
-    }
-
-    @Test
-    public void testPossiblePositions(){
-
-    }
-
-    @Test
-    public void testIsGameOver(){
-
-    }
-
-    @Test
     public void testHit(){
-
+        board.hit();
+        assertEquals(2,board.infoGetLives());
     }
 
     @Test
     public void testUp(){
-
+        board.up();
+        assertEquals(2,board.infoGetLevel());
     }
 
     @Test
-    public void testLevelUp(){
-
+    public void testShootingFire(){
+        board.shooting();
+        List<Bullet> bulletA = new ArrayList<>();
+        bulletA.add(new Bullet(1,51));
+        assertEquals(51,bulletA.get(0).getY());
     }
+
+    @Test
+    public void testIsGameOverLevel(){
+        for(int i=0; i<5; i++){
+            board.levelUp();
+        }
+        assertEquals(2, board.isGameOver());
+    }
+
+    @Test
+    public void testIsGameOverLives(){
+        for(int i=0; i<3; i++){
+            board.hit();
+        }
+        assertEquals(1, board.isGameOver());
+    }
+
 }
