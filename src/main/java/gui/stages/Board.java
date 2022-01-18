@@ -214,9 +214,6 @@ public class Board {
   public void hit(){
     informations.liveHit();
   }
-<<<<<<< HEAD
-  
-=======
 
   public int infoGetLives(){
     return informations.getLives();
@@ -230,7 +227,6 @@ public class Board {
     return informations.getLevel();
     }
 
->>>>>>> testesExtra
   public void levelUp() {
     informations.levelUp();
     if(informations.getLives() < 3) informations.oneUp();

@@ -22,7 +22,7 @@ public class Win {
     graphics.putString(new TerminalPosition(31, 12), "Thanks for helping save planet Earth");
     graphics.putString(new TerminalPosition(33, 13), "For your trouble here is a medal");
 
-    try (BufferedReader br = new BufferedReader(new FileReader("medalha.txt"))) {
+    try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/medalha.txt"))) {
       String line;
       int i=14;
       
