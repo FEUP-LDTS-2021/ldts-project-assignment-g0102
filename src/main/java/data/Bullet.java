@@ -6,7 +6,8 @@ import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 
 public class Bullet {
-     private Position position;
+
+    private Position position;
 
     public Bullet(int x, int y){ position = new Position(x,y); }
 

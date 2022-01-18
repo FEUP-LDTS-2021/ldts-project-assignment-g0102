@@ -146,7 +146,7 @@ public class Board {
       alien.setPosition(alien.moveRight());
   }
 
-  private void shooting() {
+  public void shooting() {
     Random a = new Random();
     if(aliens.size() == 0) return;
     int s = a.nextInt(aliens.size());
@@ -158,7 +158,7 @@ public class Board {
       bulletS.add(new Bullet(ship.getX(), ship.getY()-2));
   }
 
-  private void checkAlienCollision() {
+  public void checkAlienCollision() {
     for(Bullet s : bulletS) {
       if (s.getY() == 8) {
         bulletS.remove(s);
@@ -173,7 +173,7 @@ public class Board {
     }
   }
 
-  private void checkShipCollision() {
+  public void checkShipCollision() {
     for(Bullet b : bulletA) {
       if (b.getY() == 51) {
         bulletA.remove(b);
@@ -188,7 +188,7 @@ public class Board {
     }
   }
 
-  private boolean possiblePositions(List<Alien> aliens) {
+  public boolean possiblePositions(List<Alien> aliens) {
     for(Bullet s : bulletS) {
       for (Alien alien : aliens) {
         if (alien.getPosition().equals(s.getPosition())) return true;
@@ -214,7 +214,23 @@ public class Board {
   public void hit(){
     informations.liveHit();
   }
+<<<<<<< HEAD
   
+=======
+
+  public int infoGetLives(){
+    return informations.getLives();
+  }
+
+  public void up(){
+    informations.levelUp();
+  }
+
+  public int infoGetLevel(){
+    return informations.getLevel();
+    }
+
+>>>>>>> testesExtra
   public void levelUp() {
     informations.levelUp();
     if(informations.getLives() < 3) informations.oneUp();
