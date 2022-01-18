@@ -76,7 +76,6 @@ public class Information {
     graphics.enableModifiers(SGR.BOLD);
     graphics.putString(new TerminalPosition(65,55), "Number of Bullets:");
     for(int i = 0; i < Shipbullet * 2; i += 2) {
-      //graphics.putString(new TerminalPosition((84 + i),54), "^");
       graphics.putString(new TerminalPosition((84 + i),55), "û");
     }
   }

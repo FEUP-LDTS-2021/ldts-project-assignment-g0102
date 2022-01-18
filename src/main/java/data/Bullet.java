@@ -23,13 +23,11 @@ public class Bullet {
       graphics.enableModifiers(SGR.BOLD);
       if(a == 0) {
         graphics.setForegroundColor(TextColor.Factory.fromString("RED"));
-                //graphics.putString(new TerminalPosition(position.getX(), position.getY()), "^");
         graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "ù");
       }
       else {
         graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "ú");
-          //graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "Y");
       }
     }
 }
