@@ -40,7 +40,7 @@ public class GameView {
   }
 
   public AWTTerminalFontConfiguration loadFontASB() throws FontFormatException, IOException {
-    File fontFile = new File("src/main/resources/Fonts/font2.ttf");
+    File fontFile = new File("src/main/resources/Fonts/ff.ttf");
     Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 
     GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
