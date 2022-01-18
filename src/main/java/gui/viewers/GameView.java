@@ -29,24 +29,24 @@ public class GameView {
   }
 
   public Terminal createTerminal(int width, int height, AWTTerminalFontConfiguration fontConfig) throws IOException {
+    Terminal terminal;
     TerminalSize terminalSize = new TerminalSize(width, height);
     DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory().setInitialTerminalSize(terminalSize);
     terminalFactory.setForceAWTOverSwing(true);
-
     terminalFactory.setTerminalEmulatorFontConfiguration(fontConfig);
-    Terminal terminal = terminalFactory.createTerminal();
+    terminal = terminalFactory.createTerminal();
 
     return terminal;
-}
+  }
 
   public AWTTerminalFontConfiguration loadFontASB() throws FontFormatException, IOException {
-    File fontFile = new File("src/main/resources/Fonts/FontASB.ttf");
+    File fontFile = new File("src/main/resources/Fonts/font2.ttf");
     Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 
     GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
     ge.registerFont(font);
 
-    Font loadedFont = font.deriveFont(Font.PLAIN, 10);
+    Font loadedFont = font.deriveFont(Font.PLAIN, 15);
     return AWTTerminalFontConfiguration.newInstance(loadedFont);
   }
 

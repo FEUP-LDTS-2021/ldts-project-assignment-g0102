@@ -20,15 +20,16 @@ public class Bullet {
     public Position getPosition() { return this.position; }
 
     public void draw(TextGraphics graphics, int a) {
+      graphics.enableModifiers(SGR.BOLD);
+      if(a == 0) {
+        graphics.setForegroundColor(TextColor.Factory.fromString("RED"));
+                //graphics.putString(new TerminalPosition(position.getX(), position.getY()), "^");
+        graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "}");
+      }
+      else {
         graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));
-        graphics.enableModifiers(SGR.BOLD);
-        if(a == 0) {
-          //graphics.putString(new TerminalPosition(position.getX(), position.getY()), "^");
-          graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "}");
-        }
-        else {
-          graphics.putString(new TerminalPosition(position.getX(), position.getY()), "]");
+        graphics.putString(new TerminalPosition(position.getX(), position.getY()), "]");
           //graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "Y");
-        }
+      }
     }
 }
