@@ -23,12 +23,12 @@ public class Bullet {
         graphics.setForegroundColor(TextColor.Factory.fromString("WHITE"));
         graphics.enableModifiers(SGR.BOLD);
         if(a == 0) {
-          graphics.putString(new TerminalPosition(position.getX(), position.getY()), "^");
-          graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "|");
+          //graphics.putString(new TerminalPosition(position.getX(), position.getY()), "^");
+          graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "}");
         }
         else {
-          graphics.putString(new TerminalPosition(position.getX(), position.getY()), "|");
-          graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "Y");
+          graphics.putString(new TerminalPosition(position.getX(), position.getY()), "]");
+          //graphics.putString(new TerminalPosition(position.getX(), position.getY() + 1), "Y");
         }
     }
 }

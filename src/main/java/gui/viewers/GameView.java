@@ -19,13 +19,8 @@ public class GameView {
   
   public GameView(int width, int height) throws IOException, FontFormatException {
     AWTTerminalFontConfiguration fontConfig = loadFontASB();
-    TerminalSize terminalSize = new TerminalSize(width, height);
-    DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory().setInitialTerminalSize(terminalSize);
-    terminalFactory.setForceAWTOverSwing(true);
-    terminalFactory.setTerminalEmulatorFontConfiguration(fontConfig);
+    Terminal terminal = createTerminal(width, height, fontConfig);
 
-    Terminal terminal = terminalFactory.createTerminal();
-    
     screen = new TerminalScreen(terminal);
     screen.setCursorPosition(null);   // We don't need a cursor
     screen.startScreen();             // Screens must be started
@@ -33,14 +28,25 @@ public class GameView {
     graphics = screen.newTextGraphics();
   }
 
+  public Terminal createTerminal(int width, int height, AWTTerminalFontConfiguration fontConfig) throws IOException {
+    TerminalSize terminalSize = new TerminalSize(width, height);
+    DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory().setInitialTerminalSize(terminalSize);
+    terminalFactory.setForceAWTOverSwing(true);
+
+    terminalFactory.setTerminalEmulatorFontConfiguration(fontConfig);
+    Terminal terminal = terminalFactory.createTerminal();
+
+    return terminal;
+}
+
   public AWTTerminalFontConfiguration loadFontASB() throws FontFormatException, IOException {
-    File fontFile = new File("src/main/resources/fonts/overkill.ttf");
+    File fontFile = new File("src/main/resources/Fonts/FontASB.ttf");
     Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 
     GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
     ge.registerFont(font);
 
-    Font loadedFont = font.deriveFont(Font.PLAIN, 25);
+    Font loadedFont = font.deriveFont(Font.PLAIN, 10);
     return AWTTerminalFontConfiguration.newInstance(loadedFont);
   }
 
