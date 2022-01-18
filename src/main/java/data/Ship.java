@@ -40,8 +40,7 @@ public class Ship {
   public void draw(TextGraphics graphics) {
     graphics.setForegroundColor(TextColor.Factory.fromString("#FFC300"));
     graphics.enableModifiers(SGR.BOLD);
-    graphics.putString(new TerminalPosition(position.getX()-1, position.getY()-1), "/\\");
-    graphics.putString(new TerminalPosition(position.getX()-2, position.getY()), "----");
+    graphics.putString(new TerminalPosition(position.getX(), position.getY()), "ª");
   }
   
   public void setPosition(Position position) {

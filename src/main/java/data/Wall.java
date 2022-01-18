@@ -15,7 +15,7 @@ public class Wall {
 
     public void draw(TextGraphics graphics){
         graphics.setForegroundColor(TextColor.Factory.fromString("#FFC300"));
-        graphics.putString(new TerminalPosition(position.getX(), position.getY()),"_");
+        graphics.putString(new TerminalPosition(position.getX(), position.getY()),"º");
     }
 
     public Position getPosition() {

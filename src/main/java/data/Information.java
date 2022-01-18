@@ -62,7 +62,7 @@ public class Information {
     graphics.enableModifiers(SGR.BOLD);
     graphics.putString(new TerminalPosition(1,55), "Lives:");
     for(int i = 0; i < lives * 2; i += 2) {
-      graphics.putString(new TerminalPosition((8 + i),55), "X");
+      graphics.putString(new TerminalPosition((8 + i),55), "ª");
     }
   }
 
@@ -78,8 +78,7 @@ public class Information {
     graphics.enableModifiers(SGR.BOLD);
     graphics.putString(new TerminalPosition(65,55), "Number of Bullets:");
     for(int i = 0; i < Shipbullet * 2; i += 2) {
-      graphics.putString(new TerminalPosition((84 + i),54), "^");
-      graphics.putString(new TerminalPosition((84 + i),55), "|");
+      graphics.putString(new TerminalPosition((84 + i),55), "û");
     }
   }
 }

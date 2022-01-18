@@ -1,5 +1,6 @@
 package gui.stages;
 
+import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
@@ -50,8 +51,10 @@ public class Board {
   }
   
   public void draw(TextGraphics graphics){
-    graphics.setBackgroundColor(TextColor.Factory.fromString("BLACK"));
-    graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width, height), ' ');
+    graphics.enableModifiers(SGR.BOLD);
+    graphics.setBackgroundColor(TextColor.Factory.fromString("#000000"));
+    graphics.setForegroundColor(TextColor.Factory.fromString("#000000"));
+    graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width, height), 'ũ');
     for(Wall wall : walls)
       wall.draw(graphics);
     for(Alien alien : aliens)
