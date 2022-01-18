@@ -22,7 +22,7 @@ public class GameState {
   }
   
   public void run() throws IOException {
-    win.run();
+    start.run();
     int frameTime = 1000 / this.fps;
     while (i == 0){
       long startTime = System.currentTimeMillis();
