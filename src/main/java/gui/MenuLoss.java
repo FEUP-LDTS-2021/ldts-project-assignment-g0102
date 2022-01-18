@@ -26,8 +26,6 @@ public class MenuLoss {
       key = screen.readInput();
       if(key.getKeyType() == KeyType.Character && key.getCharacter() == 'q')
         screen.stopScreen();
-      if(key.getKeyType() == KeyType.Character && key.getCharacter() == ' ')
-        break;
     }while(key.getKeyType() != KeyType.EOF);
   }
 }

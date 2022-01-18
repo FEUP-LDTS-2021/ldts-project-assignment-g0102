@@ -1,16 +1,26 @@
-package data;
+package stages;
 
 import com.googlecode.lanterna.input.KeyStroke;
+import data.Alien;
+import data.Bullet;
+import data.Position;
+import data.Ship;
 import gui.stages.Board;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.googlecode.lanterna.input.KeyType.*;
 import static org.junit.Assert.*;
 
 public class TestBoard {
+
+    private final Board board = new Board(100,50);
+    private final Alien alien = board.getFirstAlien();
+
     @Test
     public void testBoardConstructor(){
-        Board board = new Board(100,50);
         assertEquals(100, board.getWidth());
         assertEquals(50, board.getHeight());
     }
@@ -18,7 +28,6 @@ public class TestBoard {
     @Test
     public void testProcessKeyLeft(){
         KeyStroke key = new KeyStroke(ArrowLeft);
-        Board board = new Board(100,50);
         board.processKey(key);
         Position pos = new Position(48,50);
         assertEquals(pos.getX(), board.getShipX());
@@ -27,7 +36,6 @@ public class TestBoard {
     @Test
     public void testProcessKeyRight(){
         KeyStroke key = new KeyStroke(ArrowRight);
-        Board board = new Board(100,50);
         board.processKey(key);
         Position pos = new Position(50,50);
         assertEquals(pos.getX(), board.getShipX());
@@ -36,7 +44,6 @@ public class TestBoard {
     @Test
     public void testProcessKeyRandom(){
         KeyStroke key = new KeyStroke(ArrowUp);
-        Board board = new Board(100,50);
         board.processKey(key);
         Position pos = new Position(49,50);
         assertEquals(pos.getX(), board.getShipX());
@@ -44,7 +51,6 @@ public class TestBoard {
     
     @Test
     public void testSetPosition(){
-        Board board = new Board(100,50);
         assertEquals(49,board.getShipX());
         Position pos = new Position(1,1);
         board.setPosition(pos);
@@ -53,7 +59,6 @@ public class TestBoard {
     
     @Test
     public void testMoveShip(){
-        Board board = new Board(100,50);
         Position pos = new Position(50, 40);
         board.moveShip(pos);
         assertEquals(pos.getX(), board.getShipX());
@@ -61,28 +66,24 @@ public class TestBoard {
     
     @Test
     public void testCanShipMoveRight(){
-        Board board = new Board(100,50);
         Position pos = new Position(99, 40);
         assertFalse(board.canShipMove(pos));
     }
     
     @Test
     public void testCanShipMoveLeft(){
-        Board board = new Board(100,50);
         Position pos = new Position(1, 40);
         assertFalse(board.canShipMove(pos));
     }
     
     @Test
     public void testCanShipMoveTrue(){
-        Board board = new Board(100,50);
         Position pos = new Position(49, 40);
         assertTrue(board.canShipMove(pos));
     }
     
     @Test
     public void testMoveAlienDown() {
-        Board board = new Board(100,50);
         assertTrue(board.getMove());
         board.moveAlienDown();
         assertFalse(board.getMove());
@@ -92,8 +93,6 @@ public class TestBoard {
     
     @Test
     public void testMoveAlienRight() {
-        Board board = new Board(100,50);
-        Alien alien = board.getFirstAlien();
         assertEquals(1, alien.getX());
         board.moveAlienRight();
         assertEquals(2, board.getFirstAlien().getX());
@@ -101,8 +100,6 @@ public class TestBoard {
     
     @Test
     public void testMoveAlienRightFar() {
-        Board board = new Board(100,50);
-        Alien alien = board.getFirstAlien();
         assertEquals(1, alien.getX());
         for(int i=0;i<10;i++)
             board.moveAlienRight();
@@ -111,8 +108,6 @@ public class TestBoard {
     
     @Test
     public void testMoveAlienLeft() {
-        Board board = new Board(100,50);
-        Alien alien = board.getFirstAlien();
         assertEquals(1, alien.getX());
         board.moveAlienLeft();
         assertEquals(0, board.getFirstAlien().getX());
@@ -120,8 +115,6 @@ public class TestBoard {
     
     @Test
     public void testMoveAlienLeftFar() {
-        Board board = new Board(100,50);
-        Alien alien = board.getFirstAlien();
         assertEquals(1, alien.getX());
         for(int i=0;i<20;i++)
             board.moveAlienRight();
@@ -129,4 +122,41 @@ public class TestBoard {
             board.moveAlienLeft();
         assertEquals(11, board.getFirstAlien().getX());
     }
+
+    @Test
+    public void testHit(){
+        board.hit();
+        assertEquals(2,board.infoGetLives());
+    }
+
+    @Test
+    public void testUp(){
+        board.up();
+        assertEquals(2,board.infoGetLevel());
+    }
+
+    @Test
+    public void testShootingFire(){
+        board.shooting();
+        List<Bullet> bulletA = new ArrayList<>();
+        bulletA.add(new Bullet(1,51));
+        assertEquals(51,bulletA.get(0).getY());
+    }
+
+    @Test
+    public void testIsGameOverLevel(){
+        for(int i=0; i<5; i++){
+            board.levelUp();
+        }
+        assertEquals(2, board.isGameOver());
+    }
+
+    @Test
+    public void testIsGameOverLives(){
+        for(int i=0; i<3; i++){
+            board.hit();
+        }
+        assertEquals(1, board.isGameOver());
+    }
+
 }
