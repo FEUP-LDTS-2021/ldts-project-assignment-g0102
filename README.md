@@ -8,7 +8,7 @@ Our game will consist of a version of the famous 80’s game “Space Invaders�
 
 ![Screenshot from 2022-01-20 12-36-09](https://user-images.githubusercontent.com/79020867/150418819-24bfe0a7-a81c-4aae-ab8f-d329935b0ade.png)
 
-![Screenshot from 2022-01-20 12-33-53](https://user-images.githubusercontent.com/79020867/150418757-4a4f0441-d36c-4e18-a248-470670707a41.png)
+![Screenshot from 2022-01-20 12-42-57](https://user-images.githubusercontent.com/79020867/150419072-23875cd9-d4ed-4d0e-a655-9d5accab32b9.png)
 
 ##Implemented Features
 
