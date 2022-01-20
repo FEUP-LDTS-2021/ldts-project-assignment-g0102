@@ -2,7 +2,7 @@
 
 Our game will consist of a version of the famous 80’s game “Space Invaders”, with our own spin on it. The player will control a tiny ship fighting against big aliens to save the planet Earth from being conquered. To succeed the player must clear the rows of aliens in 5 different stages, where the aliens will become stronger with each iteration.
 
-##Gameplay Demo
+## Gameplay Demo
 
 ![ldts -Animated Image (Small)](https://user-images.githubusercontent.com/38360936/150397236-15317323-be3e-4f9f-966e-ffc20a0658ea.gif)
 
@@ -21,7 +21,7 @@ Our game will consist of a version of the famous 80’s game “Space Invaders�
 * **Shotting** – To win the game, the ship will need to kill all the Aliens, with a bullet that will be shot by pressing the Spacebar. The bullet will be shot upwards from the ship’s position and will rise until it either hits an Alien or hits the top of the screen.
 
 
-###Alien
+### Alien
 
 * **Mob Movement** – In the beginning of every level the Aliens will start in the top left corner and will all move in sync to the rightmost boundary, then they will move down a position and go to the leftmost one, making this pattern until there are no more aliens or they reach the bottom of the screen, or the player loses all his lives.
 
@@ -42,7 +42,7 @@ Our game will consist of a version of the famous 80’s game “Space Invaders�
 * **Wall** – There are two walls displayed during gameplay, one at the top and one at the bottom, the one at the bottom works as a scoring range for the aliens, if during the game they are able to reach it, a game over will ensue. The wall at the top works as a dead zone for the players bullets, upon contacting the wall they will be cleared out of the game.
 
 
-###Information
+### Information
 
 * **Stats** – The information for the score, player health, level, number of bullets for both the player and the aliens are stored here. If the player takes damage, his health will be updated here, same goes for every other stat when their flags for update are triggered by a call. For the amount of bullets (player and aliens) and for the player to regain health back, a level up is required. The drawing on the game board of all stats is also dictated here, except for the amount of bullets for the alien, which don’t have any visible indication besides the actual amount of bullets being fired by the them.
 
@@ -52,7 +52,7 @@ Our game will consist of a version of the famous 80’s game “Space Invaders�
 * **Global positioning** – The constructor for positioning all elements on the board is stored here.
 
 
-##Planed features
+## Planed features
 
 ### Sound
 
