@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="data.TestAlien" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-01-19T21:10:09" hostname="rafaels-Mac-mini.local" time="0.045">
+  <properties/>
+  <testcase name="testAlienCloseFalse()" classname="data.TestAlien" time="0.021"/>
+  <testcase name="testAlienCloseTrue()" classname="data.TestAlien" time="0.002"/>
+  <testcase name="testCloseAlienTrue()" classname="data.TestAlien" time="0.0"/>
+  <testcase name="testAlienSetters()" classname="data.TestAlien" time="0.001"/>
+  <testcase name="testAlienSetPosition()" classname="data.TestAlien" time="0.003"/>
+  <testcase name="testAlienMoveDown()" classname="data.TestAlien" time="0.002"/>
+  <testcase name="testAlienMoveLeft()" classname="data.TestAlien" time="0.001"/>
+  <testcase name="testAlienGetPosition()" classname="data.TestAlien" time="0.001"/>
+  <testcase name="testCloseAlienFalse()" classname="data.TestAlien" time="0.002"/>
+  <testcase name="testConstructor()" classname="data.TestAlien" time="0.001"/>
+  <testcase name="testAlienMoveRight()" classname="data.TestAlien" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
