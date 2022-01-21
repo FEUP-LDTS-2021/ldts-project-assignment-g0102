@@ -106,6 +106,13 @@ When using BetterCodeHub to analyze our code, we receive two code smells that ca
 While testing our code we consulted the professor of the Labs and concluded that we didn’t need to test graphical parts of the code since it was lanterna’s job to make sure it worked. We tested every single data class and our Board to make sure everything was working in the code. 
 
 
+## Self evaluation
+
+up202006059 Diogo Almeida - 33%
+up202005954 Carlos Souza - 34%
+up201506449 Rafael Morgado - 33%
+
+
 ## UML diagram
 
 ![Uml_Diagram](https://user-images.githubusercontent.com/38360936/150384992-9f92a4bb-2221-435f-9d6e-286b53b9850c.png)
