@@ -111,7 +111,9 @@ While testing our code we consulted the professor of the Labs and concluded that
 ## Self evaluation
 
 up202006059 Diogo Almeida - 33%
+
 up202005954 Carlos Souza - 34%
+
 up201506449 Rafael Morgado - 33%
 
 
